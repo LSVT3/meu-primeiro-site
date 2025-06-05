@@ -3,10 +3,21 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Site Teste</title>
+  <title>Formulário de Nome</title>
+  <script>
+    function enviarNome() {
+      const nome = document.getElementById('nomeInput').value;
+      if(nome.trim() === '') {
+        alert('Por favor, digite seu nome!');
+      } else {
+        alert('Olá, ' + nome + '!');
+      }
+    }
+  </script>
 </head>
 <body>
-<h1>Olá, mundo!</h1>
-<p>Teste HTML Luis.</p>
+<h1>Digite seu nome:</h1>
+<input type="text" id="nomeInput" placeholder="Seu nome aqui" />
+<button onclick="enviarNome()">Enviar</button>
 </body>
 </html>
